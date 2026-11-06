@@ -51,11 +51,13 @@ try {
   $env:ANDROID_SDK_ROOT = $androidSdk
   $env:GRADLE_USER_HOME = $gradleHome
   $env:COZY_ANDROID_APP_PROJECT_DIR = $appAlias
+  $env:COZY_PROJECT_ROOT = $projectRoot
+  $env:COZY_MAPPED_PROJECT_ROOT = $mappedProjectRoot
   $env:Path = "$jdkHome\bin;$androidSdk\platform-tools;$env:Path"
 
   Push-Location $mappedProjectRoot
   try {
-    & '.\android\gradlew.bat' -p '.\android' assembleRelease --no-daemon
+    & '.\android\gradlew.bat' -p '.\android' assembleRelease --no-daemon --stacktrace
     if ($LASTEXITCODE -ne 0) { throw "Gradle terminó con código $LASTEXITCODE." }
   } finally {
     Pop-Location
@@ -64,6 +66,8 @@ try {
   Write-Host "APK creada: $(Join-Path $projectRoot 'android\app\build\outputs\apk\release\app-release.apk')"
 } finally {
   Remove-Item Env:\COZY_ANDROID_APP_PROJECT_DIR -ErrorAction SilentlyContinue
+  Remove-Item Env:\COZY_PROJECT_ROOT -ErrorAction SilentlyContinue
+  Remove-Item Env:\COZY_MAPPED_PROJECT_ROOT -ErrorAction SilentlyContinue
   if ($appAliasCreated) { Remove-Item -LiteralPath $appAlias -Force }
   if ($projectSubstCreated) { & subst.exe $projectDrive /D }
 }

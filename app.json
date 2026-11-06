@@ -2,7 +2,7 @@
   "expo": {
     "name": "TEMPO",
     "slug": "tempo",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/tempo-logo.png",
     "userInterfaceStyle": "automatic",
@@ -26,7 +26,7 @@
     },
     "android": {
       "package": "com.porta.cozytimetracker",
-      "versionCode": 2,
+      "versionCode": 3,
       "adaptiveIcon": {
         "foregroundImage": "./assets/tempo-logo.png",
         "backgroundColor": "#FFF8E8"
