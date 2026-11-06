@@ -1,0 +1,35 @@
+# Dependencies and Expo generated files
+node_modules/
+.expo/
+.expo-prebuild/
+
+# Local Android and Gradle state
+.gradle-user-home/
+.android-toolchain/
+.gradle/
+android/.gradle/
+android/build/
+android/app/build/
+android/app/.cxx/
+android/local.properties
+
+# IDE and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local outputs, secrets, and logs
+*.apk
+*.aab
+*.jks
+*.keystore
+*.hprof
+*.log
+.env
+.env.*
+!.env.example
+
+# Original/unused source assets (the optimized app icon and GLB model are tracked)
+/tempo logo.png
+assets/models/*.obj

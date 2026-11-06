@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "TEMPO",
+    "slug": "tempo",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/tempo-logo.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/tempo-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFF8E8"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "defaultChannel": "cozy-timer-reminders",
+          "color": "#8B5CF6"
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.porta.cozytimetracker",
+      "versionCode": 2,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/tempo-logo.png",
+        "backgroundColor": "#FFF8E8"
+      }
+    },
+    "web": {
+      "favicon": "./assets/tempo-logo.png"
+    }
+  }
+}

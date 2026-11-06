@@ -1,0 +1,38 @@
+{
+  "name": "tempo",
+  "version": "1.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "android:prebuild": "expo prebuild --platform android",
+    "android:apk": "powershell -ExecutionPolicy Bypass -File scripts/build-apk.ps1",
+    "ios": "expo run:ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo-google-fonts/nunito": "0.4.2",
+    "@expo/vector-icons": "^15.1.1",
+    "@react-navigation/bottom-tabs": "7.21.0",
+    "@react-navigation/native": "7.5.1",
+    "expo": "~58.0.12",
+    "expo-file-system": "~58.0.9",
+    "expo-font": "~58.0.8",
+    "expo-gl": "~58.0.3",
+    "expo-notifications": "~58.0.0",
+    "expo-splash-screen": "~58.0.9",
+    "expo-sqlite": "^58.0.13",
+    "expo-status-bar": "~58.0.3",
+    "expo-three": "^8.0.0",
+    "react": "19.3.0",
+    "react-native": "0.88.0",
+    "react-native-gesture-handler": "3.3.0",
+    "react-native-safe-area-context": "5.10.1",
+    "react-native-screens": "4.30.0",
+    "three": "^0.162.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.0"
+  },
+  "private": true
+}
